@@ -26,7 +26,6 @@ export default withForm(SignInForm, {
     password: ''
   }),
   handleSubmit: (values, { props, ...formAttr }) => {
-    console.log(props, formAttr)
     props.sendRequest({ url: '/signin', values, ...formAttr })
       .then(({ data }) => {
         const { token } = data

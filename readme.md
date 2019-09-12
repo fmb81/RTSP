@@ -3,6 +3,7 @@ Run dockerized:
 
 ```sh
 git clone https://github.com/fmb81/RTSP.git
+cd RTSP
 docker-compose up
 
 grab some tea or coffee and wait...

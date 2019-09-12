@@ -22,7 +22,6 @@ export default (WrappedComponent, props) => {
           return Promise.resolve(res)
         })
         .catch((err) => {
-          console.log(err.validation)
           if (err.validation) {
             setErrors(err.validation)
           }
