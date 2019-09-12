@@ -4,11 +4,11 @@ networks:
     driver: bridge
 
 services:
-  postgres:
+  pg:
     build:
       context: .
-      dockerfile: Dockerfile.postgres
-    image: postgres
+      dockerfile: Dockerfile.pg
+    image: pg
     ports:
       - "5433:5432"
     networks:
