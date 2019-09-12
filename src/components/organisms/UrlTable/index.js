@@ -3,7 +3,7 @@ import { withTable } from 'containers'
 import { Table, TableRow, TableCell, FootTable, Link } from 'components'
 
 export const UrlTable = ({ list, loading, failed, ...props }) => {
-  return (
+  return list.length ? (
     <Table
       foot={<FootTable {...props} />}
       {...props}
@@ -24,7 +24,7 @@ export const UrlTable = ({ list, loading, failed, ...props }) => {
         </TableRow>
       ))}
     </Table>
-  )
+  ) : null
 }
 
 export default withTable(UrlTable, { url: '/urls' })
